@@ -7,6 +7,9 @@ machine:
     EPREFIX: ${HOME}/gentoo
     PATH: "$EPREFIX/usr/bin:$EPREFIX/bin:$EPREFIX/tmp/usr/bin:$EPREFIX/tmp/bin:/usr/bin:/bin"
 
+dependencies:
+  pre:
+    - sudo apt-get install build-essential
 test:
   post:
     - bash bootstrap.sh
