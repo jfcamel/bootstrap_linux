@@ -1,5 +1,11 @@
 #!/bin/env bash
 
+export CBUILD="x86_64-pc-linux-gnu"
+export CFLAGS="-O2 -pipe -march=native"
+export CHOST="x86_64-pc-linux-gnu"
+export CXXFLAGS="-O2 -pipe -march=native"
+export LDFLAGS="-Wl,-O1 -Wl,--as-needed"
+export MAKEOPTS="-j5"
 
 export EPREFIX=${HOME}/gentoo
 export PATH="$EPREFIX/usr/bin:$EPREFIX/bin:$EPREFIX/tmp/usr/bin:$EPREFIX/tmp/bin:/usr/bin:/bin"
