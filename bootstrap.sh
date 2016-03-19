@@ -13,11 +13,12 @@ export PATH="$EPREFIX/usr/bin:$EPREFIX/bin:$EPREFIX/tmp/usr/bin:$EPREFIX/tmp/bin
 wget http://rsync.prefix.bitzolder.nl/scripts/bootstrap-prefix.sh
 
 chmod 755 bootstrap-prefix.sh
-./bootstrap-prefix.sh $EPREFIX stage1
-./bootstrap-prefix.sh $EPREFIX stage2
-./bootstrap-prefix.sh $EPREFIX stage3
+
+./bootstrap-prefix.sh $EPREFIX stage1 || exit 1
+./bootstrap-prefix.sh $EPREFIX stage2 || exit 1
+./bootstrap-prefix.sh $EPREFIX stage3 || exit 1
 
 hash -r
-emerge -e system
+emerge -e system || exit 1
 cd $EPREFIX/usr/portage/scripts
 ./bootstrap-prefix.sh $EPREFIX startscript
