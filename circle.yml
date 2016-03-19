@@ -9,14 +9,5 @@ machine:
 
 test:
   post:
-    - wget http://rsync.prefix.bitzolder.nl/scripts/bootstrap-prefix.sh
-    - chmod 755 bootstrap-prefix.sh
-    - ./bootstrap-prefix.sh $EPREFIX stage1
-    - ./bootstrap-prefix.sh $EPREFIX stage2
-    - ./bootstrap-prefix.sh $EPREFIX stage3
-    - hash -r
-    - emerge -e system
-    - cd $EPREFIX/usr/portage/scripts
-    - ./bootstrap-prefix.sh $EPREFIX startscript
-
+    - bash bootstrap.sh
 
