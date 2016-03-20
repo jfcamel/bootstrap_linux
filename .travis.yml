@@ -1,0 +1,11 @@
+os:
+  - linux
+
+compiler:
+  - gcc
+
+before_script:
+  - sudo apt-get install build-essential gcc-multilib
+script:
+  bash bootstrap.sh
+
