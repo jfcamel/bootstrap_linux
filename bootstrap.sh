@@ -1,7 +1,8 @@
 #!/bin/env bash
 
+export ABI=64
 export CBUILD="x86_64-pc-linux-gnu"
-export CFLAGS="-O2 -pipe -march=native"
+export CFLAGS="-O2 -pipe -march=corei7"
 export CHOST="x86_64-pc-linux-gnu"
 export CXXFLAGS="-O2 -pipe -march=native"
 export LDFLAGS="-Wl,-O1 -Wl,--as-needed"
