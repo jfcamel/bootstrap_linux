@@ -7,7 +7,7 @@ compiler:
 
 before_script:
   - sudo apt-get update
-  - sudo apt-get install -y libstdc++6-4.6-dev libstdc++6-4.7-dev-armhf-cross libx32stdc++6 libc6-dev-armhf-armel-cross libc6-dev-i386 libc6-dev-arm64-cross libx32ncurses5-dev libncurses5-dev
+  - sudo apt-get install -y libstdc++6-4.6-dev libc6-dev-i386 libx32ncurses5-dev libncurses5-dev
   - sudo apt-get install -y build-essential
   - sudo apt-get install -y gcc-multilib g++-multilib
 script:
